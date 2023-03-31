@@ -11,7 +11,7 @@
             type = "partition";
             name = "ESP";
             start = "0";
-            end = "64MiB";
+            end = "960MiB";
             fs-type = "fat32";
             bootable = true;
             content = {
@@ -23,7 +23,7 @@
           {
             type = "partition";
             name = "zfs";
-            start = "128MiB";
+            start = "1GiB";
             end = "100%";
             content = {
               type = "zfs";
@@ -43,7 +43,7 @@
           {
             type = "partition";
             name = "zfs";
-            start = "128MiB";
+            start = "1GiB";
             end = "100%";
             content = {
               type = "zfs";
@@ -62,7 +62,6 @@
         compression = "lz4";
         "com.sun:auto-snapshot" = "false";
       };
-
       datasets = {
         root = {
           zfs_type = "filesystem";
