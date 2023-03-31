@@ -1,5 +1,5 @@
 # Example to create a bios compatible gpt partition
-{ lib, disks ? [ "/dev/sda" ], ... }: {
+{ lib, disks ? [ "/dev/nvme0n1" "/dev/nvme1n1" ], ... }: {
   disk = lib.genAttrs disks (dev: {
     device = dev;
     type = "disk";
